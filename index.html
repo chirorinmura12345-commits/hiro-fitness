@@ -1532,48 +1532,71 @@ footer{background:var(--char);padding:80px 64px 32px;}
 
 <!-- BEFORE/AFTER -->
 <style id="ba-style">
-#result{background:linear-gradient(180deg,#faf8f4 0%,#f3eee3 100%);position:relative;}
-#result .result-lead{max-width:720px;margin:24px auto 56px;font-size:16px;line-height:2.05;color:#4a4538;text-align:center;}
-.ba-card{max-width:1080px;margin:0 auto;background:#ffffff;border:1px solid rgba(40,37,31,.12);border-radius:8px;padding:56px 48px;box-shadow:0 30px 80px -40px rgba(40,37,31,.25);}
-.ba-grid{display:grid;grid-template-columns:1fr 80px 1fr;gap:24px;align-items:center;}
+/* === Before/After section v2 === */
+#result{background:linear-gradient(180deg,#faf8f4 0%,#efeadf 100%);position:relative;padding-bottom:24px;}
+#result .result-lead{max-width:760px;margin:24px auto 56px;font-size:16px;line-height:2.05;color:#4a4538;text-align:center;}
+.ba-hero-num{text-align:center;margin:0 auto 40px;}
+.ba-hero-num .ba-hero-label{display:inline-block;font-family:"Cormorant Garamond","Noto Serif JP",serif;font-size:13px;letter-spacing:.45em;color:#8a7d5e;text-transform:uppercase;margin-bottom:18px;border-bottom:1px solid rgba(138,125,94,.4);padding:0 12px 8px;}
+.ba-hero-num .ba-hero-line{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap;color:#28251f;}
+.ba-hero-num .ba-period{font-family:"Noto Serif JP",serif;font-weight:600;font-size:30px;letter-spacing:.04em;}
+.ba-hero-num .ba-big{font-family:"Cormorant Garamond","Noto Serif JP",serif;font-weight:700;font-size:128px;line-height:1;letter-spacing:-.03em;color:#28251f;display:inline-flex;align-items:baseline;text-shadow:0 2px 0 rgba(40,37,31,.04);}
+.ba-hero-num .ba-big .ba-unit{font-family:"Noto Serif JP",serif;font-weight:700;font-size:44px;margin-left:6px;letter-spacing:.02em;color:#28251f;}
+.ba-hero-num .ba-big .ba-minus{color:#b8462f;margin-right:2px;}
+.ba-card{max-width:1120px;margin:0 auto;background:#ffffff;border:1px solid rgba(40,37,31,.1);border-radius:10px;padding:48px 44px 56px;box-shadow:0 30px 80px -40px rgba(40,37,31,.28);}
+.ba-grid{display:grid;grid-template-columns:1fr 64px 1fr;gap:0;align-items:stretch;}
 .ba-photo{margin:0;position:relative;}
-.ba-label{display:inline-block;font-family:"Cormorant Garamond","Noto Serif JP",serif;font-size:14px;letter-spacing:.25em;color:#8a7d5e;text-transform:uppercase;margin-bottom:12px;}
-.ba-label.after{color:#6f8a4f;}
-.ba-imgwrap{position:relative;aspect-ratio:3/5;width:100%;overflow:hidden;border-radius:6px;background:#ede9e0;box-shadow:0 12px 36px -16px rgba(40,37,31,.35);}
+.ba-label{display:block;text-align:center;font-family:"Cormorant Garamond","Noto Serif JP",serif;font-size:14px;font-weight:600;letter-spacing:.4em;color:#fff;text-transform:uppercase;margin-bottom:14px;background:#8a7d5e;padding:8px 0;border-radius:3px;}
+.ba-label.after{background:#6f8a4f;}
+.ba-imgwrap{position:relative;aspect-ratio:3/4;width:100%;overflow:hidden;border-radius:6px;background:#ede9e0;box-shadow:0 16px 36px -18px rgba(40,37,31,.45);}
 .ba-imgwrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.ba-imgwrap .ba-blur{filter:blur(22px) saturate(1.1);-webkit-filter:blur(22px) saturate(1.1);clip-path:ellipse(15% 10% at 50% 22%);-webkit-clip-path:ellipse(15% 10% at 50% 22%);}
-.ba-photo figcaption{margin-top:12px;text-align:center;font-size:13px;color:#6b6353;letter-spacing:.12em;}
-.ba-arrow{display:flex;flex-direction:column;align-items:center;gap:6px;color:#8a7d5e;}
-.ba-arrow svg{width:56px;height:auto;}
-.ba-arrow span{font-family:"Cormorant Garamond","Noto Serif JP",serif;font-size:13px;letter-spacing:.25em;color:#8a7d5e;text-transform:uppercase;}
-.ba-stats{margin-top:48px;padding-top:32px;border-top:1px solid rgba(40,37,31,.1);display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
-.ba-stat{display:flex;flex-direction:column;align-items:center;gap:6px;}
-.ba-num{font-family:"Cormorant Garamond","Noto Serif JP",serif;font-weight:600;font-size:56px;line-height:1;color:#28251f;letter-spacing:-.02em;display:inline-flex;align-items:baseline;}
-.ba-num small{font-family:"Noto Serif JP",serif;font-weight:500;font-size:16px;color:#6b6353;margin-left:4px;letter-spacing:0;}
-.ba-stat-l{font-size:12px;color:#8a7d5e;letter-spacing:.2em;text-transform:uppercase;}
-.ba-quote{margin:48px 0 0;padding:32px 36px 28px;background:#faf8f4;border-left:3px solid #8a7d5e;border-radius:0 6px 6px 0;}
+.ba-imgwrap .ba-blur{filter:blur(34px) saturate(1.1);-webkit-filter:blur(34px) saturate(1.1);clip-path:ellipse(28% 17% at 50% 22%);-webkit-clip-path:ellipse(28% 17% at 50% 22%);}
+.ba-photo figcaption{margin-top:14px;text-align:center;font-size:13px;color:#6b6353;letter-spacing:.16em;font-weight:500;}
+.ba-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#8a7d5e;padding-top:38px;}
+.ba-arrow svg{width:48px;height:auto;}
+.ba-stats{margin-top:44px;padding-top:32px;border-top:1px solid rgba(40,37,31,.1);display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center;}
+.ba-stat{display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 12px;}
+.ba-stat + .ba-stat{border-left:1px solid rgba(40,37,31,.08);}
+.ba-num{font-family:"Cormorant Garamond","Noto Serif JP",serif;font-weight:700;font-size:64px;line-height:1;color:#28251f;letter-spacing:-.02em;display:inline-flex;align-items:baseline;}
+.ba-num small{font-family:"Noto Serif JP",serif;font-weight:600;font-size:20px;color:#28251f;margin-left:4px;letter-spacing:.02em;}
+.ba-num.accent{color:#b8462f;}
+.ba-stat-l{font-size:12px;color:#6b6353;letter-spacing:.24em;text-transform:uppercase;font-weight:600;}
+.ba-quote{margin:48px 0 0;padding:32px 36px 28px;background:#faf8f4;border-left:4px solid #8a7d5e;border-radius:0 8px 8px 0;}
 .ba-quote p{font-size:15.5px;line-height:2.1;color:#28251f;margin:0 0 12px;}
 .ba-quote p:last-of-type{margin-bottom:0;}
-.ba-quote footer{margin-top:18px;font-size:13px;color:#6b6353;letter-spacing:.08em;font-style:normal;}
+.ba-quote .ba-quote-lead{font-size:18px;font-weight:700;color:#28251f;letter-spacing:.04em;}
+.ba-quote footer{margin-top:18px;font-size:13px;color:#6b6353;letter-spacing:.08em;font-style:normal;font-weight:500;}
 @media (max-width:768px){
-.ba-card{padding:32px 22px;}
-.ba-grid{grid-template-columns:1fr;gap:18px;}
-.ba-arrow{transform:rotate(90deg);margin:4px 0;}
-.ba-arrow svg{width:40px;}
-.ba-stats{grid-template-columns:1fr;gap:18px;padding-top:24px;margin-top:32px;}
-.ba-stat{flex-direction:row;justify-content:space-between;padding:8px 12px;border-bottom:1px dashed rgba(40,37,31,.12);}
+.ba-hero-num .ba-big{font-size:84px;}
+.ba-hero-num .ba-big .ba-unit{font-size:30px;}
+.ba-hero-num .ba-period{font-size:22px;}
+.ba-card{padding:28px 20px 36px;}
+.ba-grid{grid-template-columns:1fr;gap:14px;}
+.ba-arrow{transform:rotate(90deg);margin:6px 0;padding-top:0;}
+.ba-arrow svg{width:36px;}
+.ba-imgwrap{aspect-ratio:3/4;}
+.ba-stats{grid-template-columns:1fr;gap:14px;padding-top:24px;margin-top:32px;}
+.ba-stat{flex-direction:row;justify-content:space-between;padding:10px 12px;border-bottom:1px dashed rgba(40,37,31,.12);}
+.ba-stat + .ba-stat{border-left:none;}
 .ba-stat:last-child{border-bottom:none;}
-.ba-num{font-size:38px;}
-.ba-quote{margin-top:32px;padding:24px 22px;}
+.ba-num{font-size:40px;}
+.ba-num small{font-size:16px;}
+.ba-quote{margin-top:32px;padding:22px 18px;}
 .ba-quote p{font-size:14.5px;}
+.ba-quote .ba-quote-lead{font-size:16px;}
 }
 </style>
 <section id="result" class="sec">
   <div class="s-inner">
     <div class="s-tag reveal"><span class="s-tag-line"></span><span class="s-tag-text">Before / After</span></div>
-    <h2 class="s-h reveal">3ヶ月で<span style="color:#8a7d5e;">-12kg</span>。<br>結果は、続けられる工夫から。</h2>
+    <h2 class="s-h reveal">数字より、続けられる毎日を。</h2>
     <p class="result-lead reveal">食事のリズム、生活のクセ、続けられる強度。一人ひとりに合わせて細かく調整したことで、3ヶ月で体重-12kg、見た目も大きく変化されました。</p>
-
+    <div class="ba-hero-num reveal">
+      <span class="ba-hero-label">3 Months Result</span>
+      <div class="ba-hero-line">
+        <span class="ba-period">3ヶ月で</span>
+        <span class="ba-big"><span class="ba-minus">-</span>12<span class="ba-unit">kg</span></span>
+      </div>
+    </div>
     <div class="ba-card reveal">
       <div class="ba-grid">
         <figure class="ba-photo">
@@ -1585,8 +1608,7 @@ footer{background:var(--char);padding:80px 64px 32px;}
           <figcaption>開始時</figcaption>
         </figure>
         <div class="ba-arrow" aria-hidden="true">
-          <svg viewBox="0 0 60 16" fill="none"><path d="M2 8h54M48 2l8 6-8 6" stroke="#8a7d5e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>3 Months</span>
+          <svg viewBox="0 0 60 16" fill="none"><path d="M2 8h54M48 2l8 6-8 6" stroke="#8a7d5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <figure class="ba-photo">
           <span class="ba-label after">After</span>
@@ -1597,15 +1619,13 @@ footer{background:var(--char);padding:80px 64px 32px;}
           <figcaption>3ヶ月後</figcaption>
         </figure>
       </div>
-
       <div class="ba-stats">
-        <div class="ba-stat"><span class="ba-num">-12<small>kg</small></span><span class="ba-stat-l">体重変化</span></div>
+        <div class="ba-stat"><span class="ba-num accent">-12<small>kg</small></span><span class="ba-stat-l">体重変化</span></div>
         <div class="ba-stat"><span class="ba-num">3<small>ヶ月</small></span><span class="ba-stat-l">期間</span></div>
-        <div class="ba-stat"><span class="ba-num">30<small>代男性</small></span><span class="ba-stat-l">T様</span></div>
+        <div class="ba-stat"><span class="ba-num">30<small>代</small></span><span class="ba-stat-l">男性 T様</span></div>
       </div>
-
       <blockquote class="ba-quote">
-        <p>正直、続くか不安でした。</p>
+        <p class="ba-quote-lead">正直、続くか不安でした。</p>
         <p>でも西地さんは食事も生活リズムも僕に合わせて細かく調整してくれて、ジムに通えない週も「今週はこれだけでOK」と現実的なメニューを出してくれました。気づけば3ヶ月で12kg。数字より、自分の体に「これでいいんだ」って思えるようになったことが一番大きかったです。</p>
         <footer>— 30代男性・T様（3ヶ月で-12kg達成）</footer>
       </blockquote>
